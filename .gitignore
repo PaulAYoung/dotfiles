@@ -1,0 +1,2 @@
+#set up flag to keep dirs with a .gitkeep files
+!.gitkeep
