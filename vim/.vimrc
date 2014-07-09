@@ -49,6 +49,7 @@ NeoBundle 'marijnh/tern_for_vim', {
       \    },
       \ }
 NeoBundle 'oplatek/Conque-Shell'
+NeoBundle 'terryma/vim-multiple-cursors'
 
 filetype plugin indent on
 let mapleader = ";"
