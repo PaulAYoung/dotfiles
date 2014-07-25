@@ -55,12 +55,12 @@ filetype plugin indent on
 let mapleader = ";"
 
 "default options
-setlocal tabstop=4
-setlocal shiftwidth=4
-setlocal expandtab
-setlocal autoindent
-setlocal smarttab
-setlocal formatoptions=croql
+set tabstop=4
+set shiftwidth=4
+set expandtab
+set autoindent
+set smarttab
+set formatoptions=croql
 set number
 
 "appearance
