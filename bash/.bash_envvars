@@ -1,5 +1,11 @@
 #!/usr/bin/env bash
 # set environment variables
 
-#android sdk location
-export ANDROID_HOME=~/Applications/android_sdk
+export PATH=~/npm/bin:$PATH
+
+export ANDROID_HOME=~/Android/Sdk
+
+#add user's bin path if the directory exists
+if [ -d ~/bin ]; then
+    export PATH=~/bin:$PATH
+fi
