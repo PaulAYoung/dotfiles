@@ -83,9 +83,6 @@ nnoremap <leader>uf :Unite -start-insert file_rec/async<cr>
 let g:ycm_key_list_select_completion = ['<Down>', '<C-j>']
 let g:ycm_key_list_previous_completion = ['<C-k>', '<Up>']
 
-"jedi-vim config
-let g:jedi#usages_command = "<leader>u"
-
 "airline setup
 set laststatus=2
 set t_Co=256
@@ -96,6 +93,4 @@ let g:airline_symbols.space = "\ua0"
 let g:airline_theme="luna"
 
 "custom shortcuts
-inoremap <leader>n <c-c>
-nnoremap <leader>s :w<cr>
 nnoremap <leader>f :NERDTreeTabsToggle<cr>
