@@ -13,9 +13,9 @@ NeoBundleFetch 'Shuogo/newobundle.vim'
 "chosen bundles here
 "NeoBundle 'klen/python-mode'
 "NeoBundle 'altercation/vim-colors-solarized'
+"NeoBundle 'mhinz/vim-startify'
 NeoBundle 'flazz/vim-colorschemes'
 NeoBundle 'tpope/vim-fugitive'
-NeoBundle 'mhinz/vim-startify'
 NeoBundle "MarcWeber/vim-addon-mw-utils"
 NeoBundle 'tomtom/tlib_vim'
 NeoBundle 'scrooloose/nerdtree'
