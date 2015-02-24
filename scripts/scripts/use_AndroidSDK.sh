@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
-# Adds anaconda to path
-export PATH="/home/paul/Android/Sdk/tools:$PATH"
+# Adds android to path
+export PATH="~/Android/Sdk/tools:$PATH"
