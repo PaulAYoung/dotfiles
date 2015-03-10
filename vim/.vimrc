@@ -2,13 +2,11 @@ set nocompatible
 filetype off "required by vundle
 
 "set rtp+=~/.vim/bundle/vundle
-"call vundle#rc()
 set runtimepath+=~/.vim/bundle/neobundle.vim/
-call neobundle#rc(expand('~/.vim/bundle/'))
+call neobundle#begin(expand('~/.vim/bundle/'))
 
 "Vundle loads vundle
-"Bundle 'gmarik/vundle'
-NeoBundleFetch 'Shuogo/newobundle.vim'
+NeoBundleFetch 'Shuogo/neobundle.vim'
 
 "chosen bundles here
 "NeoBundle 'klen/python-mode'
@@ -16,11 +14,10 @@ NeoBundleFetch 'Shuogo/newobundle.vim'
 "NeoBundle 'mhinz/vim-startify'
 NeoBundle 'flazz/vim-colorschemes'
 NeoBundle 'tpope/vim-fugitive'
-NeoBundle "MarcWeber/vim-addon-mw-utils"
-NeoBundle 'tomtom/tlib_vim'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'jistr/vim-nerdtree-tabs'
-NeoBundle 'kien/ctrlp.vim'
+NeoBundle 'tomtom/tlib_vim.git'
+NeoBundle 'MarcWeber/vim-addon-mw-utils.git'
 NeoBundle 'garbas/vim-snipmate'
 NeoBundle 'honza/vim-snippets'
 NeoBundle 'bling/vim-airline'
@@ -28,7 +25,6 @@ NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/neomru.vim'
 NeoBundle 'Lokaltog/vim-easymotion'
 NeoBundle 'scrooloose/syntastic'
-"NeoBundle 'davidhalter/jedi-vim'
 NeoBundle 'Valloric/YouCompleteMe', {
       \ 'build' : {
       \     'unix': './install.sh --clang-completer',
@@ -49,7 +45,9 @@ NeoBundle 'marijnh/tern_for_vim', {
       \    },
       \ }
 NeoBundle 'oplatek/Conque-Shell'
-NeoBundle 'terryma/vim-multiple-cursors'
+
+call neobundle#end()
+NeoBundleCheck
 
 filetype plugin indent on
 let mapleader = ";"
@@ -94,3 +92,7 @@ let g:airline_theme="luna"
 
 "custom shortcuts
 nnoremap <leader>f :NERDTreeTabsToggle<cr>
+
+
+" custom filetype detection
+au BufNewFile,BufRead *.tag set filetype=html
