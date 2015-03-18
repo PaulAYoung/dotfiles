@@ -1,0 +1,8 @@
+[user]
+	email = paulandresyoung@gmail.com
+	name = Paul Young
+[core]
+	editor = vim
+	excludesfile = ~/.gitignore_global
+[push]
+	default = simple
