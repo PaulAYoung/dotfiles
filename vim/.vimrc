@@ -60,6 +60,7 @@ set autoindent
 set smarttab
 set formatoptions=croql
 set number
+set hlsearch
 
 "appearance
 colorscheme darkocean
