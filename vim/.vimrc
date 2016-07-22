@@ -1,53 +1,34 @@
 set nocompatible
 filetype off "required by vundle
 
-"set rtp+=~/.vim/bundle/vundle
-set runtimepath+=~/.vim/bundle/neobundle.vim/
-call neobundle#begin(expand('~/.vim/bundle/'))
 
-"Vundle loads vundle
-NeoBundleFetch 'Shuogo/neobundle.vim'
 
+call plug#begin('~/.vim/bundle')
 "chosen bundles here
-"NeoBundle 'klen/python-mode'
-"NeoBundle 'altercation/vim-colors-solarized'
-"NeoBundle 'mhinz/vim-startify'
-NeoBundle 'flazz/vim-colorschemes'
-NeoBundle 'tpope/vim-fugitive'
-NeoBundle 'scrooloose/nerdtree'
-NeoBundle 'jistr/vim-nerdtree-tabs'
-NeoBundle 'tomtom/tlib_vim.git'
-NeoBundle 'MarcWeber/vim-addon-mw-utils.git'
-NeoBundle 'garbas/vim-snipmate'
-NeoBundle 'honza/vim-snippets'
-NeoBundle 'bling/vim-airline'
-NeoBundle 'Shougo/unite.vim'
-NeoBundle 'Shougo/neomru.vim'
-NeoBundle 'Lokaltog/vim-easymotion'
-NeoBundle 'scrooloose/syntastic'
-NeoBundle 'Valloric/YouCompleteMe', {
-      \ 'build' : {
-      \     'unix': './install.sh --clang-completer',
-      \    },
-      \  }
-NeoBundle 'Shougo/vimproc', {
-      \ 'build' : {
-      \     'windows' : 'make -f make_mingw32.mak',
-      \     'cygwin' : 'make -f make_cygwin.mak',
-      \     'mac' : 'make -f make_mac.mak',
-      \     'unix' : 'make -f make_unix.mak',
-      \    },
-      \ }
-NeoBundle 'Shougo/unite-outline'
-NeoBundle 'marijnh/tern_for_vim', {
-      \ 'build': {
-      \    'unix': 'npm install',
-      \    },
-      \ }
-NeoBundle 'oplatek/Conque-Shell'
+"Plug 'klen/python-mode'
+"Plug 'altercation/vim-colors-solarized'
+"Plug 'mhinz/vim-startify'
+Plug 'flazz/vim-colorschemes'
+Plug 'tpope/vim-fugitive'
+Plug 'scrooloose/nerdtree'
+Plug 'jistr/vim-nerdtree-tabs'
+Plug 'tomtom/tlib_vim'
+Plug 'MarcWeber/vim-addon-mw-utils'
+Plug 'garbas/vim-snipmate'
+Plug 'honza/vim-snippets'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'Shougo/unite.vim'
+Plug 'Shougo/neomru.vim'
+Plug 'Lokaltog/vim-easymotion'
+Plug 'scrooloose/syntastic'
+Plug 'Valloric/YouCompleteMe', {'do': './install.py --clang-completer'}
+Plug 'Shougo/vimproc', {'do' : 'make -f make_unix.mak'}
+Plug 'Shougo/unite-outline'
+Plug 'marijnh/tern_for_vim', {'do': 'npm install'}
+Plug 'oplatek/Conque-Shell'
 
-call neobundle#end()
-NeoBundleCheck
+call plug#end()
 
 filetype plugin indent on
 let mapleader = ";"
@@ -81,6 +62,7 @@ nnoremap <leader>uf :Unite -start-insert file_rec/async<cr>
 "YCM shortcuts
 let g:ycm_key_list_select_completion = ['<Down>', '<C-j>']
 let g:ycm_key_list_previous_completion = ['<C-k>', '<Up>']
+let g:ycm_server_python_interpreter = '/usr/bin/python'
 
 "airline setup
 set laststatus=2
